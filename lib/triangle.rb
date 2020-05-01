@@ -15,8 +15,6 @@ attr_accessor :side_a, :side_b, :side_c,:equilateral,:isosceles, :scalene
         return :isosceles if sides.length == 2
         return :scalene if sides.length == 3
       end
-      if sides.each {|i| i <=0 }
-        raise TriangleError
   end
 
     class TriangleError < StandardError
