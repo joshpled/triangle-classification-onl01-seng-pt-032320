@@ -12,7 +12,7 @@ attr_accessor :side_a, :side_b, :side_c,:equilateral,:isosceles, :scalene
     sides = [@side_a,@side_b,@side_c].uniq
     if sides.each {|i| i <=0 }
       nil
-    else
+    end 
           return :equilateral if sides.length == 1
           return :isosceles if sides.length == 2
           return :scalene if sides.length == 3
