@@ -16,9 +16,9 @@ attr_accessor :side_a, :side_b, :side_c,:equilateral,:isosceles, :scalene
         return :equilateral if sides.length == 1
         return :isosceles if sides.length == 2
         return :scalene if sides.length == 3
-        end
+      end
     end
-  end 
+  end
 
     class TriangleError < StandardError
       def message
