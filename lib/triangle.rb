@@ -11,7 +11,7 @@ attr_accessor :side_a, :side_b, :side_c,:equilateral,:isosceles, :scalene
   def kind
     sides = [@side_a,@side_b,@side_c].uniq
     if sides.each {|i| i <=0 }
-      nil
+      raise TriangleError
     end 
           return :equilateral if sides.length == 1
           return :isosceles if sides.length == 2
@@ -35,9 +35,9 @@ end
   #   end
   #
   #
-  # class TriangleError < StandardError
-  #   def message
-  #     "This is not a triangle!"
-  #   end
-  # end
+  class TriangleError < StandardError
+    def message
+      "This is not a triangle!"
+    end
+  end
 # end
