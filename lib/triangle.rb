@@ -18,6 +18,12 @@ attr_accessor :side_a, :side_b, :side_c,:equilateral,:isosceles, :scalene
           return :scalene if sides.length == 3
         end
 end
+class TriangleError < StandardError
+  def message
+    "This is not a triangle!"
+  end
+end
+end 
 
 
 
@@ -35,9 +41,5 @@ end
   #   end
   #
   #
-  class TriangleError < StandardError
-    def message
-      "This is not a triangle!"
-    end
-  end
+
 # end
