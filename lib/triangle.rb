@@ -24,7 +24,7 @@ attr_accessor :side_a, :side_b, :side_c,:equilateral,:isosceles, :scalene
         "This is not a triangle!"
       end
     end
-    
+  end 
 end
 
 
