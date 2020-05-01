@@ -10,7 +10,7 @@ attr_accessor :side_a, :side_b, :side_c,:equilateral,:isosceles, :scalene
 
   def kind
     sides = [@side_a,@side_b,@side_c].uniq
-    raise TriangleError if sides.any? {|s| s <= 0}
+    raise TriangleError if sides.any? {|s| s <= 0} || (sides[0]+ sides[1]) <= sides[2]
         return :equilateral if sides.length == 1
         return :isosceles if sides.length == 2
         return :scalene if sides.length == 3
