@@ -9,8 +9,7 @@ attr_accessor :side_a, :side_b, :side_c,:equilateral,:isosceles, :scalene
   end
 
   def kind
-    sides = [@side_a,@side_b,@side_c]
-    sides.uniq
+    sides = [@side_a,@side_b,@side_c].uniq
           return :equilateral if sides.length == 1
           return :isosceles if sides.length == 2
           return :scalene if sides.length == 3
